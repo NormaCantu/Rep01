@@ -2,7 +2,7 @@ name: Reto05
 on:
   workflow_dispatch:
 env: 
- entorno: dev
+ entorno: test
  
 jobs:
   deploy:
