@@ -1,1 +1,12 @@
 #soy un demo de un archivo yml
+name: reto04
+on: 
+   workflow_dispatch
+jobs: 
+  Job1:
+   runs-on: ubuntu-latest
+	 steps:
+	    -name: step1 
+       run: echo 'hola'
+      -name: step2
+       run: echo 'STEP2'
