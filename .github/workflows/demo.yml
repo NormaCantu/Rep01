@@ -1,7 +1,9 @@
 #soy un demo de un archivo yml
 name: reto04
 on: 
-   workflow_dispatch
+  issues:
+   types: [opened]
+   workflow_dispatch:
 jobs: 
   Job1:
    runs-on: ubuntu-latest
