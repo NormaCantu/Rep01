@@ -1,1 +1,27 @@
-
+name: Reto05
+on:
+  workflow_dispatch:
+env: 
+ entorno: dev
+ 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+ 
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.CREDENCIALES }}
+ 
+      - name: Deploy Bicep template for dev
+        uses: azure/arm-deploy@v1
+        with:
+          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          resourceGroupName: ${{ vars.RESOURCE_GROUP_NAME }}
+          template: ./InfrastructureAsCode/main.bicep
+          parameters: environment=${{ env.entorno }} location=EastUS
+        continue-on-error: true
