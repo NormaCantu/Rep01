@@ -14,5 +14,8 @@ jobs:
   Job2:
    runs-on: ubuntu-latest
    steps:
-    - name: Ship ituses: mscoutermarsh/cowsays-action@masterwith:
-      text: 'Generar mas pasos: 'red'
+    - name: Ship it
+      uses: mscoutermarsh/cowsays-action@master
+      with:
+      text: 'Ship'
+      color: 'red'
