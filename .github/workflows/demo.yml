@@ -10,3 +10,9 @@ jobs:
       run: echo 'hola'
     - name: step2
       run: echo 'Paso 02'
+jobs:
+  Job2:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Ship ituses: mscoutermarsh/cowsays-action@masterwith:
+      text: 'Generar mas pasos: 'red'
