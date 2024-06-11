@@ -10,7 +10,6 @@ jobs:
       run: echo 'hola'
     - name: step2
       run: echo 'Paso 02'
-jobs:
   Job2:
    runs-on: ubuntu-latest
    steps:
